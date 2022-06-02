@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Praktikum {
+class Praktikum {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,12 +11,15 @@ public class Praktikum {
             System.out.println("12.09." + year);  // здесь нужно вывести результат
         } else {
 	    System.out.println("13.09." + year);
+        }
     }
 
     public static boolean isLeapYear(int year) {
         // здесь нужно определить, является ли переданный год високосным
-	    if (year % 400 == 0) && (year % 4 == 0) && (year % 100 != 0) {
-		    isLeapYear = true;
+	    if ((year % 400 == 0) || (year % 4 == 0) || (year % 100 != 0)) {
+		    return true;
 	    } 
+	    return false;
     }
+    
 } 
